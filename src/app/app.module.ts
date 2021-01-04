@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirebaseService } from './services/firebase.service'
+import { FirebaseService } from './services/firebase.service';
+import { SingUpComponent } from './sing-up/sing-up.component';
+import { SignInComponent } from './sign-in/sign-in.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SingUpComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
