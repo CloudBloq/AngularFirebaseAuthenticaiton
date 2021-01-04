@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FirebaseService } from './services/firebase.service';
 import { SingUpComponent } from './sing-up/sing-up.component';
 import { SignInComponent } from './sign-in/sign-in.component'
+import { EventEmiterService } from './services/event.emmiter.service'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { SignInComponent } from './sign-in/sign-in.component'
       appId: "1:659794333361:web:1bb49ce0f929aec09ddc90"
     }),
   ],
-  providers: [FirebaseService],
+  providers: [FirebaseService, SignInComponent, EventEmiterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
