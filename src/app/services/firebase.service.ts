@@ -19,4 +19,11 @@ export class FirebaseService {
       localStorage.setItem('user', JSON.stringify(res.user));
     })
   }
+  async signUp(email: string, password: string) {
+    await this.firebaseAuth.createUserWithEmailAndPassword(email, password).then(res => {
+      // here we will update the isLoggedIn bool
+      this.isLoggedIn = true; a
+      localStorage.setItem('user', JSON.stringify(res.user));
+    })
+  }
 }
